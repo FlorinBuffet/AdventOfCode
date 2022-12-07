@@ -6,13 +6,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class day07 {
-
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		File file = new File("data/day99.txt");
 		Scanner scan = new Scanner(file);
 		scan.nextLine();
-
-		int currentLine = 1;
 		
 		day07Node root = new day07Node("/", null);
 		day07Node workNode = root;
@@ -20,7 +18,6 @@ public class day07 {
 		boolean statusLS = false; //0 = none, 1 = ls
 		
 		while (scan.hasNextLine()) {
-			currentLine++;
 			String line = scan.nextLine();
 			if (line.charAt(0)=='$') {
 				statusLS = false;
@@ -42,7 +39,8 @@ public class day07 {
 			
 		}
 		scan.close();
-		System.out.println("TEST");
+		
+		System.out.println("Resultat Teil 1: "+ getResults(root));
 	}
 	
 	public static day07Node cdRunner(day07Node workNode, day07Node root, String todo) {
@@ -60,4 +58,20 @@ public class day07 {
 		return root;
 	}
 
+	public static long getResults(day07Node root) {		
+		int result = 0;
+		long resultPart1 = 0;
+		for (day07Node current : root.childs) {
+			resultPart1 += getResults(current);
+			result += current.bottomupsize;
+		}
+		for (day07File current : root.files) {
+			result += current.size;
+		}
+		root.bottomupsize = result;
+		
+		if (result <= 100000)
+			resultPart1 += result;
+		return resultPart1;
+	}
 }
