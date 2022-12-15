@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class day13Packet implements Comparable<day13Packet>{
+public class day13Packet implements Comparable<day13Packet> {
 	List<day13Packet> childs;
 	int value;
 	boolean isInteger = true;
 	String str;
-	
+
 	public day13Packet(String input) {
 		str = input;
 		childs = new ArrayList<>();
@@ -15,10 +15,10 @@ public class day13Packet implements Comparable<day13Packet>{
 		if (!input.startsWith("["))
 			value = Integer.parseInt(input);
 		else {
-			input = input.substring(1,input.length()-1);
+			input = input.substring(1, input.length() - 1);
 			int level = 0;
 			String tmp = "";
-			
+
 			for (char c : input.toCharArray()) {
 				if (c == ',' && level == 0) {
 					childs.add(new day13Packet(tmp));
@@ -33,7 +33,7 @@ public class day13Packet implements Comparable<day13Packet>{
 			isInteger = false;
 		}
 	}
-	
+
 	public int compareTo(day13Packet other) {
 		if (isInteger && other.isInteger) {
 			return other.value - value;

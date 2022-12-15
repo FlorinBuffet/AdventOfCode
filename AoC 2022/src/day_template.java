@@ -11,10 +11,9 @@ public class day_template {
 		File file = new File("data/dayxx.txt");
 		Scanner scan = new Scanner(file);
 
-
 		while (scan.hasNextLine()) {
 			String line = scan.nextLine();
-			
+
 		}
 		scan.close();
 	}

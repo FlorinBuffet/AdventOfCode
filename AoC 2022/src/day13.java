@@ -19,38 +19,38 @@ public class day13 {
 		while (scan.hasNextLine()) {
 			day13Packet packet1 = new day13Packet(scan.nextLine());
 			day13Packet packet2 = new day13Packet(scan.nextLine());
-			
+
 			try {
 				scan.nextLine();
-			}catch(NoSuchElementException e) {}
-			
+			} catch (NoSuchElementException e) {
+			}
+
 			packets.add(packet1);
 			packets.add(packet2);
-			
+
 			correctSignals += packet1.compareTo(packet2) > 0 ? index : 0;
 			index++;
 		}
 		scan.close();
-		System.out.println("Teillösung 1: "+correctSignals);
-		
+		System.out.println("Teillösung 1: " + correctSignals);
+
 		day13Packet tmp = new day13Packet("[[2]]");
 		packets.add(tmp);
 		tmp = new day13Packet("[[6]]");
 		packets.add(tmp);
-		
+
 		Collections.sort(packets);
 		Collections.reverse(packets);
-		
+
 		int product = 1;
-		
-		for (int i = 0; i<packets.size(); i++) {
-			if ((packets.get(i).str.equals("[[2]]"))||(packets.get(i).str.equals("[[6]]"))) {
-				product *= i+1;
+
+		for (int i = 0; i < packets.size(); i++) {
+			if ((packets.get(i).str.equals("[[2]]")) || (packets.get(i).str.equals("[[6]]"))) {
+				product *= i + 1;
 			}
 		}
-		
-		System.out.println("Teillösung 2: "+product);
-	}
 
+		System.out.println("Teillösung 2: " + product);
+	}
 
 }

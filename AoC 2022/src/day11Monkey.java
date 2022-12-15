@@ -10,7 +10,7 @@ public class day11Monkey {
 	int ifFalse;
 	int itemsinspected;
 	int itemsinspected2;
-	
+
 	public day11Monkey(int monkeyNr, int test, int ifTrue, int ifFalse) {
 		this.test = test;
 		this.ifTrue = ifTrue;
@@ -21,13 +21,13 @@ public class day11Monkey {
 		this.itemsinspected = 0;
 		this.itemsinspected2 = 0;
 	}
-	
+
 	public void addItem(long number) {
 		this.items.add((long) number);
 	}
-	
+
 	public void addItem2(long number) {
 		this.items2.add((long) number);
 	}
-	
+
 }
