@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class day07Node {
-	int bottomupsize;
+	long bottomupsize;
 	ArrayList<day07File> files;
 	String name;
 	day07Node parent;

@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class day07 {
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		File file = new File("data/day99.txt");
+		File file = new File("data/day07.txt");
 		Scanner scan = new Scanner(file);
 		scan.nextLine();
 		
@@ -41,6 +41,7 @@ public class day07 {
 		scan.close();
 		
 		System.out.println("Resultat Teil 1: "+ getResults(root));
+		System.out.println("TEST");
 	}
 	
 	public static day07Node cdRunner(day07Node workNode, day07Node root, String todo) {
@@ -59,7 +60,7 @@ public class day07 {
 	}
 
 	public static long getResults(day07Node root) {		
-		int result = 0;
+		long result = 0;
 		long resultPart1 = 0;
 		for (day07Node current : root.childs) {
 			resultPart1 += getResults(current);
