@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day10 {
@@ -38,6 +35,7 @@ public class day10 {
 					|| (cycle == 220)) {
 				signal += xReg * cycle;
 			}
+			lScan.close();
 		}
 		scan.close();
 		System.out.println();

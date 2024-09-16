@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -48,7 +47,7 @@ public class day03 {
 
 		long part1 = Long.parseLong("" + gamma, 2) * Long.parseLong("" + epsilon, 2);
 
-		System.out.println("Lösung Berechnungsmethode 1: " + part1);
+		System.out.println("Lï¿½sung Berechnungsmethode 1: " + part1);
 
 		List<String> copyDiagnostics = new ArrayList<String>(allDiagnostics);
 
@@ -104,7 +103,7 @@ public class day03 {
 
 		long part2 = Long.parseLong("" + copyDiagnostics.get(0), 2) * Long.parseLong("" + allDiagnostics.get(0), 2);
 
-		System.out.println("Lösung Berechnungsmethode 2: " + part2);
+		System.out.println("Lï¿½sung Berechnungsmethode 2: " + part2);
 
 	}
 

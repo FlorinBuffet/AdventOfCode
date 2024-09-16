@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day06 {
@@ -36,6 +33,7 @@ public class day06 {
 			ages[8] = reproduce;
 			ages[6] += reproduce;
 		}
+		scan.close();
 	}
 	
 	public static void countFish(long[] ages, int days) {

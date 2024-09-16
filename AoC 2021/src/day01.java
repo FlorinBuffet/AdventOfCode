@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day01 {
@@ -11,7 +8,6 @@ public class day01 {
 		File file = new File("data/day01.txt");
 		Scanner scan = new Scanner(file);
 
-		int lastNum = Integer.MAX_VALUE;
 		int part1 = 0;
 		int part2 = -3; // as the first three always have the increment
 		int[] lastvalues = new int[3];
@@ -31,8 +27,8 @@ public class day01 {
 		}
 		scan.close();
 
-		System.out.println("Teillösung 1: " + part1);
-		System.out.println("Teillösung 2: " + part2);
+		System.out.println("Teillï¿½sung 1: " + part1);
+		System.out.println("Teillï¿½sung 2: " + part2);
 	}
 
 }

@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day09 {
@@ -44,6 +41,7 @@ public class day09 {
 				visitedTail[tPos[0][0]][tPos[0][1]] = true;
 				visitedTail9[tPos[8][0]][tPos[8][1]] = true;
 			}
+			lScanner.close();
 		}
 		scan.close();
 

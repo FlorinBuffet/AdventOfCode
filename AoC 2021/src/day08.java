@@ -1,9 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day08 {
@@ -43,7 +40,7 @@ public class day08 {
 			}
 		}
 		scan.close();
-		System.out.println("Teillösung 1: "+part1Result);
+		System.out.println("Teillï¿½sung 1: "+part1Result);
 	}
 
 }

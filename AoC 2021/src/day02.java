@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class day02 {
@@ -37,8 +34,8 @@ public class day02 {
 		}
 		scan.close();
 
-		System.out.println("Lösung Teil 1: " + hPos * dPosPart1);
-		System.out.println("Lösung Teil 2: " + hPos * dPosPart2);
+		System.out.println("Lï¿½sung Teil 1: " + hPos * dPosPart1);
+		System.out.println("Lï¿½sung Teil 2: " + hPos * dPosPart2);
 	}
 
 }
